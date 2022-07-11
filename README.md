@@ -97,7 +97,7 @@ npm test test/GreeterTest.ts
 
 ## Documentation
 
-Documentation for the contracts is generated via the [solidity-docgen](https://github.com/OpenZeppelin/solidity-docgen) package. Run the tool via the following command:
+The documentation for the contracts is generated via the [solidity-docgen](https://github.com/OpenZeppelin/solidity-docgen) package. Run the tool via the following command:
 
 ```bash
 npm run docgen

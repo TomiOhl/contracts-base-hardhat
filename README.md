@@ -9,7 +9,7 @@ A version using [Truffle](https://trufflesuite.com/truffle) is available [here](
 To run the project you need:
 
 - [Node.js](https://nodejs.org) development environment.
-- (optional) A file named `.env`
+- a file named `.env`
 
 Your `.env` file should contain the following variables:
 

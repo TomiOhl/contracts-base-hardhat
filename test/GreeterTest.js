@@ -22,15 +22,13 @@ describe("Greeter - JS test", function () {
 
   it("should revert if the greeting is too short", async function () {
     const greeting = "Hey";
-    expect(this.greeter.setGreeting(greeting))
+    await expect(this.greeter.setGreeting(greeting))
       .to.be.revertedWithCustomError(this.greeter, "NameTooShort")
       .withArgs("3", "4");
   });
 
   it("should emit a GreetingUpdated event", async function () {
     const greeting = "Hey, wassup";
-    expect(this.greeter.setGreeting(greeting))
-      .to.emit(this.greeter, "GreetingUpdated")
-      .withArgs(greeting);
+    await expect(this.greeter.setGreeting(greeting)).to.emit(this.greeter, "GreetingUpdated").withArgs(greeting);
   });
 });

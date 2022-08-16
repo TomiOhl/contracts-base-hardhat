@@ -55,7 +55,7 @@ Networks can be configured in _hardhat.config.ts_. We've preconfigured the follo
 
 ## Verification
 
-For automatic verification on block explorers, you can use the Etherscan plugin:
+For source code verification on block explorers, you can use the Etherscan plugin:
 
 ```bash
 npx hardhat verify [contractAddress] [constructorArguments] --network [networkName]

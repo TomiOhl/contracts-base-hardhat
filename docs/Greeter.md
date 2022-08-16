@@ -17,7 +17,7 @@ The address of the owner.
 ### constructor
 
 ```solidity
-function constructor(
+constructor(
     string _greeting
 ) 
 ```

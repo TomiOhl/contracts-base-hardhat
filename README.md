@@ -78,7 +78,7 @@ npm test
 To run the unit tests only in a specific file, just append the path to the command. For example, to run tests just for Greeter:
 
 ```bash
-npm test test/GreeterTest.ts
+npm test test/Greeter.spec.ts
 ```
 
 ## Documentation

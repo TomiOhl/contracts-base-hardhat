@@ -4,33 +4,17 @@ The setup in this repository can be used as a quick starting point for smart con
 
 A version using [Truffle](https://trufflesuite.com/truffle) is available [here](https://github.com/schronck/contracts-base).
 
-## Requirements
-
-To run the project you need:
-
-- [Node.js](https://nodejs.org) development environment.
-- a file named `.env`
-
-Your `.env` file should contain the following variables:
-
-```bash
-# The private key of your wallet.
-PRIVATE_KEY=
-
-# Your infura.io project ID for deploying to Ethereum networks.
-INFURA_ID=
-
-# Your API key for verification.
-ETHERSCAN_API_KEY=
-```
-
 ## Setup
+
+To run the project you need [Node.js](https://nodejs.org) development environment.
 
 Pull the repository from GitHub, then install its dependencies by executing this command:
 
 ```bash
 npm install
 ```
+
+Certain actions, like deploying to a public network or verifying source code on block explorers, need environment variables in a file named `.env`. See _[.env.example](.env.example)_ for more info.
 
 ## Contract deployment
 
@@ -40,7 +24,7 @@ To deploy the smart contracts to a network, replace _[networkName]_ with the nam
 hardhat run scripts/[scriptName] --network [networkName]
 ```
 
-Networks can be configured in _hardhat.config.ts_. We've preconfigured the following:
+Networks can be configured in _[hardhat.config.ts](hardhat.config.ts)_. We've preconfigured the following:
 
 - `hardhat` (for local testing, default)
 - `ethereum` (Ethereum Mainnet)

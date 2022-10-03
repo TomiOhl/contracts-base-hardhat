@@ -69,6 +69,8 @@ modifier restricted(address allowed)
 
 Restricts the callers of functions.
 
+#### Parameters
+
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | allowed | address | The address allowed to call the function the modifier is used on. |
@@ -101,6 +103,8 @@ error NameTooShort(uint256 length, uint256 required)
 
 Error thrown when the name is too short.
 
+#### Parameters
+
 | Name | Type | Description |
 | ---- | ---- | ----------- |
 | length | uint256 | The attempted length. |
@@ -113,6 +117,8 @@ error Unauthorized(address sender, address allowed)
 ```
 
 Error thrown when a restricted function is attempted to be called from an unauthorized address.
+
+#### Parameters
 
 | Name | Type | Description |
 | ---- | ---- | ----------- |

@@ -9,7 +9,7 @@ describe("Greeter - JS test", function () {
     await this.greeter.deployed();
   });
 
-  it("Should return the new greeting once it's changed", async function () {
+  it("should return the new greeting once it's changed", async function () {
     expect(await this.greeter.greet()).to.equal("Hello, world!");
 
     const setGreetingTx = await this.greeter.setGreeting("Hola, mundo!");
@@ -24,7 +24,7 @@ describe("Greeter - JS test", function () {
     const greeting = "Hey";
     await expect(this.greeter.setGreeting(greeting))
       .to.be.revertedWithCustomError(this.greeter, "NameTooShort")
-      .withArgs("3", "4");
+      .withArgs(3, 4);
   });
 
   it("should emit a GreetingUpdated event", async function () {

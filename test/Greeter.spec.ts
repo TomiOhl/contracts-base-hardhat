@@ -9,7 +9,7 @@ describe("Greeter - TS test", function () {
     await this.greeter.deployed();
   });
 
-  it("Should return the new greeting once it's changed", async function () {
+  it("should return the new greeting once it's changed", async function () {
     expect(await this.greeter.greet()).to.equal("Hello, world!");
 
     const setGreetingTx = await this.greeter.setGreeting("Hola, mundo!");

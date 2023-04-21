@@ -1,4 +1,4 @@
-name: Lint, compile and test
+name: Code checks
 
 on:
   push:

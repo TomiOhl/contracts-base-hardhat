@@ -40,6 +40,7 @@ contract Greeter {
     /// @notice Greets the user.
     /// @return greetingText The text of the greeting.
     function greet() public view returns (string memory greetingText) {
+        uint256 uselessvar;
         return greeting;
     }
 

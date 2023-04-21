@@ -31,8 +31,11 @@ jobs:
         run: npm ci
         if: steps.cache.outputs.cache-hit != 'true'
 
-      - name: Lint
-        run: npm run lint
+      - name: Lint contracts
+        run: npm run lint-contracts
+
+      - name: Lint scripts
+        run: npm run lint-ts
 
   tests:
     runs-on: ubuntu-latest

@@ -53,7 +53,7 @@ const config: HardhatUserConfig = {
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : []
     },
     mumbai: {
-      url: `https://rpc-mumbai.matic.today`,
+      url: `https://matic-mumbai.chainstacklabs.com`,
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : []
     },
     gnosis: {

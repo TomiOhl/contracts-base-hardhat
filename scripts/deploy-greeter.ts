@@ -19,15 +19,13 @@ async function main() {
   const Greeter = await ethers.getContractFactory("Greeter");
   const greeter = await Greeter.deploy(greeting);
 
-  console.log(
-    `Deploying contract to ${
-      ethers.provider.network.name !== "unknown" ? ethers.provider.network.name : ethers.provider.network.chainId
-    }...`
-  );
+  const network = await ethers.provider.getNetwork();
+  console.log(`Deploying contract to ${network.name !== "unknown" ? network.name : network.chainId}...`);
+  console.log(`Tx hash: ${greeter.deploymentTransaction()?.hash}`);
 
-  await greeter.deployed();
+  await greeter.waitForDeployment();
 
-  console.log("Greeter deployed to:", greeter.address);
+  console.log("Greeter deployed to:", await greeter.getAddress());
   console.log("Constructor arguments:", greeting);
 }
 

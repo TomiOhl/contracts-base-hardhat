@@ -1,10 +1,10 @@
-import { HardhatUserConfig, task } from "hardhat/config";
 import "@nomicfoundation/hardhat-chai-matchers";
-import "@nomiclabs/hardhat-ethers";
-import "@nomiclabs/hardhat-etherscan";
-import "hardhat-gas-reporter";
-import "solidity-docgen";
+import "@nomicfoundation/hardhat-ethers";
+import "@nomicfoundation/hardhat-verify";
 import "dotenv/config";
+import "hardhat-gas-reporter";
+import { HardhatUserConfig, task } from "hardhat/config";
+import "solidity-docgen";
 
 // This is a sample Hardhat task. To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html

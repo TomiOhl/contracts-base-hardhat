@@ -6,7 +6,7 @@ describe("Greeter - JS test", function () {
   this.beforeEach("deploy contract", async function () {
     const Greeter = await ethers.getContractFactory("Greeter");
     this.greeter = await Greeter.deploy("Hello, world!");
-    await this.greeter.deployed();
+    await this.greeter.waitForDeployment();
   });
 
   it("should return the new greeting once it's changed", async function () {

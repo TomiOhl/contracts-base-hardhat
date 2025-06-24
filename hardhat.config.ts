@@ -163,6 +163,7 @@ const config: HardhatUserConfig = {
     }
   },
   gasReporter: {
+    coinmarketcap: process.env.COINMARKETCAP_API_KEY || "",
     enabled: true,
     currency: "USD",
     showTimeSpent: true

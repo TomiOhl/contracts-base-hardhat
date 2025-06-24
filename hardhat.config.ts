@@ -160,6 +160,18 @@ const config: HardhatUserConfig = {
     sonic: {
       url: "https://rpc.soniclabs.com/",
       accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : []
+    },
+    xdc: {
+      url: "https://erpc.xinfin.network",
+      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : []
+    },
+    soneium: {
+      url: "https://rpc.soneium.org",
+      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : []
+    },
+    world: {
+      url: "https://worldchain-mainnet.g.alchemy.com/public",
+      accounts: process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : []
     }
   },
   gasReporter: {
@@ -198,7 +210,10 @@ const config: HardhatUserConfig = {
       form: "form",
       ink: "ink",
       iota: "iota",
-      sonic: process.env.SONICSCAN_API_KEY || ""
+      sonic: process.env.SONICSCAN_API_KEY || "",
+      xdc: process.env.XDCSCAN_API_KEY || "",
+      soneium: "soneium",
+      world: process.env.WORLDSCAN_API_KEY || ""
     },
     customChains: [
       {
@@ -318,6 +333,24 @@ const config: HardhatUserConfig = {
           apiURL: "https://api.sonicscan.org/api",
           browserURL: "https://sonicscan.org"
         }
+      },
+      {
+        network: "xdc",
+        chainId: 50,
+        urls: {
+          apiURL: "https://api.xdcscan.com/api",
+          browserURL: "https://xdcscan.com"
+        }
+      },
+      {
+        network: "soneium",
+        chainId: 1868,
+        urls: { apiURL: "https://soneium.blockscout.com/api", browserURL: "https://soneium.blockscout.com" }
+      },
+      {
+        network: "world",
+        chainId: 480,
+        urls: { apiURL: "https://api.worldscan.org/api", browserURL: "https://worldscan.org" }
       }
     ]
   },

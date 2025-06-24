@@ -60,6 +60,9 @@ Networks can be configured in _[hardhat.config.ts](hardhat.config.ts)_. We've pr
 - `ink` (Ink Mainnet)
 - `iota` (IOTA EVM Mainnet)
 - `sonic` (Sonic Mainnet)
+- `xdc` (XDC Network Mainnet)
+- `soneium` (Soneium Mainnet)
+- `world` (World Chain Mainnet)
 
 ## Verification
 
